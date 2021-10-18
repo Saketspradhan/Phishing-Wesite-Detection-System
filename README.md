@@ -1,2 +1,2 @@
 # Phishing Website Detection System 
-Add description
+This tool uses Machine Learning models to figure out if a particular website is spam or not.
