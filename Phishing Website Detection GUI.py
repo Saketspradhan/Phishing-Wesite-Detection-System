@@ -32,7 +32,7 @@ from PIL import Image, ImageTk
 
 root = Tk()
 root.title('Phishing Website Detection Tool')
-# root.iconbitmap('C:/Users/saket/Downloads/favicon.ico')
+root.iconbitmap('ENTER FAVICON PATH HERE/favicon_name.ico')
 
 
 def submitButton():
@@ -87,7 +87,7 @@ def popup3():
     messagebox.showinfo('Error!', 'Please enter a website-URL first.')
 
 
-# ***************************Logging related imports & settings**************************************
+# ***************************Logging related Imports & Settings**************************************
 
 def getlogger(fileName = "newsScrapelog"): # format the log entries
     formatter = logging.Formatter('%(asctime)s %(name)s %(levelname)s %(message)s')
@@ -138,7 +138,7 @@ default_classifier.set(CLASSIFIERS[0][0])
 for model_name, accuracy_percentage in CLASSIFIERS: Radiobutton(select_model_frame, text=model_name, variable=default_classifier, value=model_name).pack(anchor=W)
 
 already_selected = False
-phisher = joblib.load("C:/Users/saket/OneDrive/Desktop/Python Projects/Phishing Website/Logistical Regression.joblib")
+phisher = joblib.load(r"ENTER MODEL PATH HERE/model_name.joblib")
 select_button = Button(select_model_frame, text='Select', padx=30, pady=2, command=lambda: selectButton(default_classifier.get(), CLASSIFIERS)) 
 select_button.pack(anchor=CENTER)
 
